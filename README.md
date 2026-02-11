@@ -1,49 +1,85 @@
-# Discord.js Starter (User + Guild Installable)
+# Miru - Anime & Manga Discord Bot
 
-This is a minimal Discord.js v14 template that supports both **user install** and **guild install** command contexts.
+> 🚧 **Currently in active development**
 
-## Setup
+Miru is a Discord bot that brings anime, manga, and character information directly to your Discord server or DMs. Powered by the [Jikan API](https://jikan.moe/) (unofficial MyAnimeList API), Miru provides rich, detailed information with an intuitive dropdown interface.
 
-1. Install dependencies:
+## Features
 
+- 🎬 **Anime Search** - Search and browse anime with detailed information
+  - Studios with clickable links
+  - Genres, air dates, rankings
+  - 600-character synopses
+  - English/Japanese titles
+  - Interactive dropdown to browse up to 25 results
+
+- 📚 **Manga Search** - Comprehensive manga information
+  - Authors with clickable links
+  - Genres, publication dates, rankings
+  - Chapter and volume counts
+  - Interactive result browsing
+
+- 👤 **Character Search** - Detailed character profiles
+  - Anime and manga appearances
+  - Japanese voice actors
+  - Favorites count
+  - Browse multiple character results
+
+## Installation
+
+1. **Install dependencies:**
    ```bash
    npm install
    ```
 
-2. Copy env file and fill values:
-
+2. **Configure environment:**
    ```bash
    cp .env.example .env
+   # Edit .env and add your Discord bot token and application ID
    ```
 
-3. Register commands:
-
+3. **Register commands:**
    ```bash
    npm run deploy
    ```
 
-4. Start the bot:
-
+4. **Start the bot:**
    ```bash
    npm start
    ```
 
-## OAuth2 Install Links
+## Commands
+
+- `/anime <query>` - Search for anime by title
+- `/manga <query>` - Search for manga by title
+- `/character <query>` - Search for characters by name
+- `/ping` - Check bot latency
+
+## Installation Links
 
 Replace `YOUR_CLIENT_ID` with your application ID.
 
-- **Guild install (bot + slash commands)**
+- **Guild install (server installation)**
   ```
   https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot%20applications.commands&permissions=0&integration_type=0
   ```
 
-- **User install (slash commands for users)**
+- **User install (personal installation)**
   ```
   https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=applications.commands&integration_type=1
   ```
 
-## Notes
+## Tech Stack
 
-- Commands are defined in [src/commands](src/commands).
-- The `ping` command is configured for both user and guild contexts.
-- If `GUILD_ID` is set, commands are registered to that guild only (fast). Otherwise they are global.
+- [Discord.js](https://discord.js.org/) v14
+- [Jikan API](https://docs.api.jikan.moe/) v4
+- Node.js
+
+## License
+
+This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- MyAnimeList for the anime/manga data
+- [Jikan](https://jikan.moe/) for the awesome API
