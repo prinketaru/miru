@@ -1,0 +1,30 @@
+{
+  "name": "miru-bot",
+  "version": "0.1.0",
+  "description": "Discord.js bot starter (user + guild installable)",
+  "keywords": [
+    "discord",
+    "anime",
+    "bot"
+  ],
+  "license": "GPL-3.0",
+  "author": "prinke.dev",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy": "node src/deploy-commands.js"
+  },
+  "dependencies": {
+    "discord-api-types": "^0.37.106",
+    "discord.js": "^14.25.1",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.0"
+  }
+}
